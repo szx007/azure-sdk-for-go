@@ -124,10 +124,6 @@ func (b *azureOpenAIPolicy) Do(req *policy.Request) (*http.Response, error) {
 }
 
 func (client *Client) formatURL(path string) string {
-	if client.cd.azure {
-		return runtime.JoinPaths("openai", path)
-	}
-
 	return path
 }
 
